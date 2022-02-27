@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import data from "../Components/fakeData";
+import data from "./fakeData";
 import Patients from "./Patients";
 
 export default class ClassicalCalendar extends Component{
