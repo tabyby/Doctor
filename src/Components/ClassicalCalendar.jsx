@@ -2,12 +2,9 @@ import React, { Component } from "react";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import data from "./fakeData";
-<<<<<<< HEAD
-import Patients from "./Patients";
-=======
+import Patients from './Patients'
 import { AdvancedImage } from "@cloudinary/react";
 import {Cloudinary} from "@cloudinary/url-gen"
->>>>>>> 3b9d2237c6133aa9d5baba2c42c47776f1046e0f
 
 export default class ClassicalCalendar extends Component{
     constructor(){
@@ -17,7 +14,6 @@ export default class ClassicalCalendar extends Component{
             view : "all",
         }
     }
-<<<<<<< HEAD
     handleViews = s => {
         this.setState({
             view : s,
@@ -49,44 +45,7 @@ export default class ClassicalCalendar extends Component{
                 <div>{this.state.selectedDate.toDateString()}</div>
                     <button onClick={()=>this.handleViews('today')} >Check List</button>
                     {dataUnsorted}
-                    
             </div>
         )
     }
 }
-=======
-
-
-    return (
-      <div>
-          
-        <Calendar onChange={this.handleChange} />
-        <div> you have {sortedData.length} appointments </div>
-        <div>{this.state.selectedDate.toDateString()}</div>
-        <button onClick={() => this.handleViews("today")}>Check List</button>
-        <table>
-          <thead>
-            <tr>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Country</th>
-            </tr>
-          </thead>
-          {sortedData.map(patient=>{
-              return(
-                <tbody key={patient.name} >
-          <tr key={patient.name} >
-             <td>{patient.name}</td>
-            <td>{patient.dateOfBirth}</td>
-            <td>{patient.dateOfAp}</td>
-             <td>{patient.time}</td>
-             </tr> 
-             </tbody>
-              )
-          })}
-        </table>
-      </div>
-    );
-  }
-}
->>>>>>> 3b9d2237c6133aa9d5baba2c42c47776f1046e0f
