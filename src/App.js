@@ -4,8 +4,8 @@ import ClassicalCalendar from './Components/ClassicalCalendar';
 function App() {
   return (
     <div >
-{/* <Blog/> */}
-<ClassicalCalendar/>
+<Blog/>
+{/* <ClassicalCalendar/> */}
 
     </div>
   );
