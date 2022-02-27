@@ -2,6 +2,7 @@ import React from "react";
 import moment from 'moment';
 import BlogComponent from './BlogComponent';
 import shortid from 'shortid';
+import axios from "axios";
 
 export default class Blog extends React.Component {
     constructor(){
@@ -13,6 +14,16 @@ export default class Blog extends React.Component {
             img:'',
         }
     }
+    componentDidMount(){
+        axios.get('http://localhost:3000/doctor/api/selectBlogs')
+        .then(response=>{
+            console.log(response.data);
+            this.setState({
+                blogArr:response.data
+            })
+        })
+       
+        }
     handleChange = e => {
         const {name,value} = e.target;
         this.setState({
@@ -33,6 +44,7 @@ export default class Blog extends React.Component {
             createdAt : moment().format(),
             doctorId : shortid.generate(),
         });
+        axios.post('http://localhost:3000/doctor/api/postBlogs',this.state)
     }
     render(){
         return(
