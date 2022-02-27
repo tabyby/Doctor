@@ -2,8 +2,8 @@ import React from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import data from "./fakeData";
-import { Link, useNavigate } from "react-router-dom";
-
+import { AdvancedImage } from "@cloudinary/react";
+import {Cloudinary} from "@cloudinary/url-gen"
 
 export default class ClassicalCalendar extends React.Component {
   constructor() {
@@ -31,9 +31,6 @@ export default class ClassicalCalendar extends React.Component {
           parseInt(patient.dateOfAp[0]) === this.state.selectedDate.getDate()
       );
     }
-    console.log(sortedData);
-    console.log(typeof this.state.selectedDate.getDate());
-    
 
     return (
       
@@ -45,9 +42,11 @@ export default class ClassicalCalendar extends React.Component {
         <button onClick={() => this.handleViews("today")}>Check List</button>
         <table>
           <thead>
+            <tr>
             <th>Company</th>
             <th>Contact</th>
             <th>Country</th>
+            </tr>
           </thead>
           {sortedData.map(patient=>{
               return(
