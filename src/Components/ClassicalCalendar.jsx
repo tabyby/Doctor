@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import data from "./fakeData";
-import Patients from './Patients'
 import './grid.css'
 import { AdvancedImage } from "@cloudinary/react";
 import { Cloudinary } from "@cloudinary/url-gen"
@@ -25,23 +24,18 @@ export default class ClassicalCalendar extends Component {
         this.setState({
             view: s,
         });
-
     }
     handleChange = (date) => {
         this.setState({ selectedDate: date });
     }
     render() {
         let sortedData = [];
-
         sortedData = data.filter(patient => parseInt(patient.dateOfAp[0]) === this.state.selectedDate.getDate());
-
 
         return (
             <div>
                 <div>
-
                     <div>
-
                     </div>
                     <div class="parent">
                         <div class="div1">
@@ -56,7 +50,6 @@ export default class ClassicalCalendar extends Component {
                                 <div className="center">
                                     <div > you have {sortedData.length} appointments on </div><br />
                                     <div> {this.state.selectedDate.toDateString()}</div><br />
-
                                 </div>
                                 <div className="center ">
                                     {/* <button onClick={()=>{this.handleViews('today')
@@ -115,9 +108,11 @@ export default class ClassicalCalendar extends Component {
                                         </li>
                                         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                                     <li>
+                                        <Link to="contactUs">
                                         <a>
                                             <span className="item">contact us</span>
                                         </a>
+                                        </Link>
                                     </li>
                                     <li>
                                         <a>
