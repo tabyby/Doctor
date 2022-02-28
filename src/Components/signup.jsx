@@ -210,40 +210,40 @@ const Signup = () => {
                           </div>
                           <div class="mb-3">
                             <input id="inputEmail" type="text" placeholder="Location" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4" type="phoneNumber"
-                type="location"
-                placeholder="location"
-                name="location"
-                onChange={handleChange}
-                value={data.location}
-                required />
+                              type="location"
+                              placeholder="location"
+                              name="location"
+                              onChange={handleChange}
+                              value={data.location}
+                              required />
                           </div>
                           <div class="mb-3">
                             <input id="inputEmail" type="text" placeholder="Profile picture" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4" type="phoneNumber"
-                type="profilePicture"
-                placeholder="ProfilePicture"
-                name="profilePicture"
-                onChange={handleChange}
-                value={data.profilePicture}
-                required />
+                              type="profilePicture"
+                              placeholder="ProfilePicture"
+                              name="profilePicture"
+                              onChange={handleChange}
+                              value={data.profilePicture}
+                              required />
                           </div>
                           <div class="mb-3">
                             <input id="inputEmail" type="text" placeholder="Description" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4" type="phoneNumber"
-                type="description"
-                placeholder="description"
-                name="description"
-                onChange={handleChange}
-                value={data.description}
-                required />
+                              type="description"
+                              placeholder="description"
+                              name="description"
+                              onChange={handleChange}
+                              value={data.description}
+                              required />
                           </div>
-                          
                           <div class="form-check">
                             <input id="customCheck1" type="checkbox" checked class="form-check-input" />
                             <label for="customCheck1" class="form-check-label">Remember password</label>
                           </div>
+                          <Link to ='/PostBlogs'>
                           <div class="d-grid gap-2 mt-2">
                             <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm"  >Sign in</button>
                           </div>
-
+                          </Link>
                         </form>
                       </div>
                     </div>
