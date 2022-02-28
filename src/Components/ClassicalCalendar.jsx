@@ -113,12 +113,17 @@ export default class ClassicalCalendar extends Component {
                                                 <span class="item">Blogs</span>
                                             </a>
                                         </li>
-                                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                                        <li>
-                                            <Link to="/contactUs">
-                                                <span class="item">contact us</span>
-                                            </Link>
-                                        </li>
+                                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                                    <li>
+                                        <a>
+                                            <span className="item">contact us</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span className="item">Log out</span>
+                                        </a>
+                                    </li>
                                     </ul>
                                 </div>
                             </div>

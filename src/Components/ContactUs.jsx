@@ -15,11 +15,9 @@ export default class contactUs extends React.Component {
                         <br /><br /><br />
                         <div className="div1 center">
                             <form id="contact-form" className="form">
-                                
-                                    <h1>Contact us!</h1>
-                                
+                                <h1>Contact us!</h1>
                                 <br />
-                                <h5>If you are facing a problem or you want to ask some question, please don't hesitate to contact us.</h5>
+                                <h5>If you are facing a problem or you want to ask some questions, please don't hesitate to contact us.</h5>
                                 <br />
                                 <div className="form-group">
                                     <label htmlFor="name">Name</label>
@@ -62,10 +60,15 @@ export default class contactUs extends React.Component {
                                             <span className="item">Blogs</span>
                                         </a>
                                     </li>
-                                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                                     <li>
                                         <a className="active">
                                             <span className="item">contact us</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span className="item">Log out</span>
                                         </a>
                                     </li>
                                 </ul>
