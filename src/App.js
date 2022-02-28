@@ -1,12 +1,13 @@
 import './App.css';
 import Blog from './Components/Blog';
+import DoctorProfile from './Components/DoctorProfile';
 import ClassicalCalendar from './Components/ClassicalCalendar';
 function App() {
   return (
     <div >
-<Blog/>
+{/* <Blog/> */}
 {/* <ClassicalCalendar/> */}
-
+    <DoctorProfile/>
     </div>
   );
 }
