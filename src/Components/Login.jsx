@@ -64,7 +64,7 @@ const Login = () => {
             />
             {error && <div className="styleslogincontainer">{error}</div>}
 
-            <button type="submit" className="styleslogincontainer">
+            <button onclick={()=>{handleSubmit()}} type="submit" className="styleslogincontainer">
               Sing In
             </button>
           </form>
