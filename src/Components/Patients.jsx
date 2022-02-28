@@ -1,11 +1,17 @@
 import React from "react";
-function Patients (props) {
-    return(
+import './grid.css'
+function Patients(props) {
+    return (
         <div>
-            <div>{props.patient.name}</div>
-            <div>{props.patient.dateOfBirth}</div>
-            <div>{props.patient.dateOfAp}</div>
-            <div>{props.patient.time}</div>
+            <table id="customers">
+                <tr>
+                    <td>{props.patient.name}</td>
+                    <td>{props.patient.dateOfBirth}</td>
+                    <td>{props.patient.dateOfAp}</td>
+                    <td>{props.patient.time}</td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
     )
 }

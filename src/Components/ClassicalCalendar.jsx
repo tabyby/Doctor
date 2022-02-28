@@ -16,75 +16,115 @@ export default class ClassicalCalendar extends Component {
             view: "all",
         }
     }
+    backToAll = () => {
+        this.setState({
+            view:'all',
+        })
+    }
     handleViews = s => {
         this.setState({
             view: s,
-        })
+        });
+        
     }
     handleChange = (date) => {
         this.setState({ selectedDate: date });
     }
     render() {
         let sortedData = [];
-        if (this.state.view === "all") {
-            sortedData = data;
-        }
-        else if (this.state.view === "today") {
-            sortedData = data.filter(patient => parseInt(patient.dateOfAp[0]) === this.state.selectedDate.getDate());
-        }
-        console.log(sortedData)
-        console.log(typeof (this.state.selectedDate.getDate()))
 
-        let dataUnsorted = sortedData.map(patient => {
-            return (
-                <Patients key={patient.name} patient={patient} />
-            )
-        })
+            sortedData = data.filter(patient => parseInt(patient.dateOfAp[0]) === this.state.selectedDate.getDate());
+        
+
         return (
             <div>
-                <div className="center" >
-                    <br /><br /><br /><br />
-                    <Calendar onChange={this.handleChange} />
-                    <div className="center"> you have {sortedData.length} appointments </div>
-                    <div>{this.state.selectedDate.toDateString()}</div>
-                    <button onClick={() => this.handleViews('today')} >Check List</button>
-                    {dataUnsorted}
-                </div>
                 <div>
-                    <div class="wrapper">
-                        <div class="sidebar">
-                            <div class="profile">
-                                <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg" alt="profile_picture" />
-                                <h3>Dr Oussama</h3>
-                                <p>Dentist</p>
+
+                    <div>
+
+                    </div>
+                    <div class="parent">
+                        <div class="div1">
+                            <div>
+                                <br /><br /> 
+                                <h6 className="center">Hello doctor, these are your appointements, you only have to select a date on the calendar</h6>
+                                <br />
+                                <div className="center" >
+                                    <Calendar  onChange={this.handleChange} />
+                                </div>
+                                <br />
+                                    <div className="center">
+                                        <div > you have {sortedData.length} appointments on </div><br />
+                                        <div> {this.state.selectedDate.toDateString()}</div><br />
+
+                                    </div>
+                                        <div className="center ">
+                                        {/* <button onClick={()=>{this.handleViews('today')
+                                       
+                                    }} >Check List</button> */}
+                                        </div>
+                                    <br />
+                                    <h2 className="center">Table of appointements:</h2>
+                                <div className="center">
+                                    <table id="customers" >
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Date of bith</th>
+                                            <th>date of appointement</th>
+                                            <th>Time</th>
+                                        </tr>
+                                        {sortedData.map(patient => {
+                                            return (
+                                                <tbody key={patient.name} >
+                                                    <tr key={patient.name} >
+                                                        <td>{patient.name}</td>
+                                                        <td>{patient.dateOfBirth}</td>
+                                                        <td>{patient.dateOfAp}</td>
+                                                        <td>{patient.time}</td>
+                                                    </tr>
+                                                </tbody>
+                                            )
+                                        })}
+                                    </table>
+                                </div>
                             </div>
-                            <ul>
-                                <li>
-                                    <a class="active">
-                                        <span class="item">Calendar</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a >
-                                        <span class="item">Post blogs</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a >
-                                        <span class="item">Blogs</span>
-                                    </a>
-                                </li>
-                                <br /><br /><br /><br /><br />
+                        </div>
+                        <div class="div2">
+                            <div class="wrapper">
+                                <div class="sidebar">
+                                    <div class="profile">
+                                        <img src="https://media.discordapp.net/attachments/936015556287528980/947614190263210035/cc93f1595f4ec18589d585e5d9910c2f.jpg?width=473&height=473" alt="profile_picture" />
+                                        <h3>Dr Mortadha</h3>
+                                        <p>Dentist</p>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a class="active">
+                                                <span class="item">Calendar</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a >
+                                                <span class="item">Post blogs</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a >
+                                                <span class="item">Blogs</span>
+                                            </a>
+                                        </li>
+                                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-                                <li>
-                                    <a href="#">
-                                        <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
-                                        <span class="item">contact us</span>
-                                    </a>
-                                </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="item">contact us</span>
+                                            </a>
+                                        </li>
 
-                            </ul>
+                                    </ul>
 
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
