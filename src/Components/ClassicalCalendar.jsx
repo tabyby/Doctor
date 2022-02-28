@@ -18,14 +18,14 @@ export default class ClassicalCalendar extends Component {
     }
     backToAll = () => {
         this.setState({
-            view:'all',
+            view: 'all',
         })
     }
     handleViews = s => {
         this.setState({
             view: s,
         });
-        
+
     }
     handleChange = (date) => {
         this.setState({ selectedDate: date });
@@ -33,8 +33,8 @@ export default class ClassicalCalendar extends Component {
     render() {
         let sortedData = [];
 
-            sortedData = data.filter(patient => parseInt(patient.dateOfAp[0]) === this.state.selectedDate.getDate());
-        
+        sortedData = data.filter(patient => parseInt(patient.dateOfAp[0]) === this.state.selectedDate.getDate());
+
 
         return (
             <div>
@@ -46,25 +46,25 @@ export default class ClassicalCalendar extends Component {
                     <div class="parent">
                         <div class="div1">
                             <div>
-                                <br /><br /> 
+                                <br /><br />
                                 <h6 className="center">Hello doctor, these are your appointements, you only have to select a date on the calendar</h6>
                                 <br />
                                 <div className="center" >
-                                    <Calendar  onChange={this.handleChange} />
+                                    <Calendar onChange={this.handleChange} />
                                 </div>
                                 <br />
-                                    <div className="center">
-                                        <div > you have {sortedData.length} appointments on </div><br />
-                                        <div> {this.state.selectedDate.toDateString()}</div><br />
+                                <div className="center">
+                                    <div > you have {sortedData.length} appointments on </div><br />
+                                    <div> {this.state.selectedDate.toDateString()}</div><br />
 
-                                    </div>
-                                        <div className="center ">
-                                        {/* <button onClick={()=>{this.handleViews('today')
+                                </div>
+                                <div className="center ">
+                                    {/* <button onClick={()=>{this.handleViews('today')
                                        
                                     }} >Check List</button> */}
-                                        </div>
-                                    <br />
-                                    <h2 className="center">Table of appointements:</h2>
+                                </div>
+                                <br />
+                                <h2 className="center">Table of appointements:</h2>
                                 <div className="center">
                                     <table id="customers" >
                                         <tr>
@@ -114,15 +114,12 @@ export default class ClassicalCalendar extends Component {
                                             </a>
                                         </li>
                                         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
                                         <li>
-                                            <a href="#">
+                                            <Link to="/contactUs">
                                                 <span class="item">contact us</span>
-                                            </a>
+                                            </Link>
                                         </li>
-
                                     </ul>
-
                                 </div>
                             </div>
                         </div>
