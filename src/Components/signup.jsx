@@ -239,7 +239,7 @@ const Signup = () => {
                             <input id="customCheck1" type="checkbox" checked class="form-check-input" />
                             <label for="customCheck1" class="form-check-label">Remember password</label>
                           </div>
-                          <Link to ='/PostBlogs'>
+                          <Link to ='/Calendar'>
                           <div class="d-grid gap-2 mt-2">
                             <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm"  >Sign in</button>
                           </div>
