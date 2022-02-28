@@ -44,19 +44,32 @@ export default class Blog extends React.Component {
             createdAt : moment().format(),
             doctorId : shortid.generate(),
         });
-        axios.post('http://localhost:3000/doctor/api/postBlogs',this.state)
+        axios.post('http://localhost:3000/doctor/api/postBlogs',this.state);
+        this.uploadImage();
     }
+    uploadImage = files => {
+        const formData = new FormData();
+        formData.append("file",files[0]);
+        formData.append("upload_preset", "wjrv25lx")
+        axios.post('https://api.cloudinary.com/v1_1/dcpnqg5fy/image/upload',formData).then(response=>{
+            console.log(response)
+        })
+    };
+
     render(){
         return(
             <form onSubmit={this.handleSubmit} >
                  <div><input name='title' value={this.state.title} onChange={this.handleChange} /></div>   
-                 <div><input name='img' value={this.state.img} onChange={this.handleChange} /></div>   
+                 <div><input name='img' value={this.state.img} onChange={this.handleChange} /></div> 
+                 <input type="file" onChange={(event)=>{
+                     this.uploadImage(event.target.files);
+                 }} />  
                  <div><textarea name='text' value={this.state.text} onChange={this.handleChange} /></div>  
                  <button onClick={this.handleSubmit} >Add Blog</button> 
                     {this.state.blogArr.map(blog=>{
                         return(
                             <table>
-                                <BlogComponent key={blog.doctorId} blog={blog} />
+                                <BlogComponent key={blog.texte} blog={blog} />
 
                             </table>
                         )
