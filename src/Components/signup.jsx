@@ -30,9 +30,9 @@ const Signup = () => {
       const url = "http://localhost:3000/doctor/signup";
       const { data: res } = await axios.post(url, data);
       navigate("/");
-      console.log(res.message,'hhhhh');
+      console.log(res.message, "hhhhh");
     } catch (err) {
-      console.log(err,"no ");
+      console.log(err, "no ");
     }
   };
 
@@ -304,20 +304,27 @@ const Signup = () => {
                             />
                           </div>
                           <div class="form-check">
-                            <input id="customCheck1" type="checkbox" checked class="form-check-input" />
-                            <label for="customCheck1" class="form-check-label">Remember password</label>
+                            <input
+                              id="customCheck1"
+                              type="checkbox"
+                              checked
+                              class="form-check-input"
+                            />
+                            <label for="customCheck1" class="form-check-label">
+                              Remember password
+                            </label>
                           </div>
-                          <Link to ='/Calendar'>
-                        
-                          {/* <Link to="/login"> */}
+                          <Link to="/Calendar">
+                            {/* <Link to="/login"> */}
                             <div class="d-grid gap-2 mt-2">
                               <button
                                 type="submit"
                                 class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm"
                                 onClick={handleSubmit}
                               >
-                                Sign in
+                                Sign up
                               </button>
+                              <button>google signup</button>
                             </div>
                           </Link>
                         </form>
