@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import data from "./fakeData";
-import Patients from './Patients'
 import './grid.css'
-import {Link,useNavigate} from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { AdvancedImage } from "@cloudinary/react";
 
 export default class ClassicalCalendar extends Component {
@@ -24,23 +23,18 @@ export default class ClassicalCalendar extends Component {
         this.setState({
             view: s,
         });
-
     }
     handleChange = (date) => {
         this.setState({ selectedDate: date });
     }
     render() {
         let sortedData = [];
-
         sortedData = data.filter(patient => parseInt(patient.dateOfAp[0]) === this.state.selectedDate.getDate());
-
 
         return (
             <div>
                 <div>
-
                     <div>
-
                     </div>
                     <div class="parent">
                         <div class="div1">
@@ -53,14 +47,10 @@ export default class ClassicalCalendar extends Component {
                                 </div>
                                 <br />
                                 <div className="center">
-                                    <div > you have {sortedData.length} appointments on </div><br />
+                                    <div > you have {sortedData.length} appointments on</div><br />
                                     <div> {this.state.selectedDate.toDateString()}</div><br />
-
                                 </div>
                                 <div className="center ">
-                                    {/* <button onClick={()=>{this.handleViews('today')
-                                       
-                                    }} >Check List</button> */}
                                 </div>
                                 <br />
                                 <h2 className="center">Table of appointements:</h2>
@@ -69,7 +59,7 @@ export default class ClassicalCalendar extends Component {
                                         <tr>
                                             <th>Name</th>
                                             <th>Date of bith</th>
-                                            <th>date of appointement</th>
+                                            <th>Date of appointement</th>
                                             <th>Time</th>
                                         </tr>
                                         {sortedData.map(patient => {
@@ -87,6 +77,7 @@ export default class ClassicalCalendar extends Component {
                                     </table>
                                 </div>
                             </div>
+                            <br /><br />
                         </div>
                         <div class="div2">
                             <div class="wrapper">
@@ -103,20 +94,27 @@ export default class ClassicalCalendar extends Component {
                                             </a>
                                         </li>
                                         <li>
-                                            <a >
-                                                <span class="item">Post blogs</span>
-                                            </a>
+                                            <Link to="/PostBlog">
+                                                <span className="item">Post blogs</span>
+                                            </Link>
                                         </li>
                                         <li>
                                             <a >
-                                                <span class="item">Blogs</span>
+                                                <span className="item">Blogs</span>
                                             </a>
                                         </li>
-                                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                                         <li>
                                             <Link to="/contactUs">
-                                                <span class="item">contact us</span>
+
+                                                <span className="item">contact us</span>
+
                                             </Link>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <span className="item">Log out</span>
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
