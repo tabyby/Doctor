@@ -33,8 +33,8 @@ const Login = () => {
           // navigate.push("/login");
         } else if (response.msg === "logged in successfully")
           setUser(data.email);
-          navigate("/PostBlogs");
-          localStorage.setItem("doctor",JSON.stringify(response.data.token));
+        navigate("/Calendar");
+        localStorage.setItem("doctor", JSON.stringify(response.data.token));
         // console.log('user',user)
       });
     } catch (error) {

@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./login.css";
-
 const Signup = () => {
   const [data, setData] = useState({
     firstName: "",
@@ -305,16 +304,11 @@ const Signup = () => {
                             />
                           </div>
                           <div class="form-check">
-                            <input
-                              id="customCheck1"
-                              type="checkbox"
-                              checked
-                              class="form-check-input"
-                            />
-                            <label for="customCheck1" class="form-check-label">
-                              Remember password
-                            </label>
+                            <input id="customCheck1" type="checkbox" checked class="form-check-input" />
+                            <label for="customCheck1" class="form-check-label">Remember password</label>
                           </div>
+                          <Link to ='/Calendar'>
+                        
                           {/* <Link to="/login"> */}
                             <div class="d-grid gap-2 mt-2">
                               <button
@@ -325,7 +319,7 @@ const Signup = () => {
                                 Sign in
                               </button>
                             </div>
-                          {/* </Link> */}
+                          </Link>
                         </form>
                       </div>
                     </div>
