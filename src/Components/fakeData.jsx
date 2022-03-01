@@ -51,7 +51,7 @@ const data = [
         name: "أم كلثوم",
         dateOfBirth: '30/05/1910',
         dateOfAp: ["28", "03", "2022"],
-        time: "11:40",
+        time: "14:30",
     },
 ]
 
