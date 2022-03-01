@@ -51,9 +51,11 @@ export default class contactUs extends React.Component {
                                         </Link>
                                     </li>
                                     <li>
-                                        <a >
+                                        <Link to="/PostBlog">
+
                                             <span className="item">Post blogs</span>
-                                        </a>
+
+                                        </Link>
                                     </li>
                                     <li>
                                         <a >

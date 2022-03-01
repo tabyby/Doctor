@@ -3,7 +3,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import data from "./fakeData";
 import './grid.css'
-import {Link,useNavigate} from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { AdvancedImage } from "@cloudinary/react";
 
 export default class ClassicalCalendar extends Component {
@@ -94,9 +94,9 @@ export default class ClassicalCalendar extends Component {
                                             </a>
                                         </li>
                                         <li>
-                                            <a >
-                                                <span class="item">Post blogs</span>
-                                            </a>
+                                            <Link to="/PostBlog">
+                                                <span className="item">Post blogs</span>
+                                            </Link>
                                         </li>
                                         <li>
                                             <a >
@@ -105,7 +105,7 @@ export default class ClassicalCalendar extends Component {
                                         </li>
                                         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                                         <li>
-                                            <Link to="contactUs">
+                                            <Link to="/contactUs">
 
                                                 <span className="item">contact us</span>
 
