@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import data from "./fakeData";
 import './grid.css'
+import {Link,useNavigate} from "react-router-dom"
 import { AdvancedImage } from "@cloudinary/react";
-import { Cloudinary } from "@cloudinary/url-gen"
 
 export default class ClassicalCalendar extends Component {
     constructor() {
