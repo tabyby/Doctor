@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./login.css";
+// 644746242624-2ucis9hcf3c6lq19v97lncjd3ajtd18r.apps.googleusercontent.com
 const Signup = () => {
   const [data, setData] = useState({
     firstName: "",
@@ -32,7 +33,7 @@ const Signup = () => {
       navigate("/");
       console.log(res.message, "hhhhh");
     } catch (err) {
-      console.log(err, "no ");
+      console.log(err, "no");
     }
   };
 
