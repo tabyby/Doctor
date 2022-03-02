@@ -17,10 +17,8 @@ function App() {
         <Route path="/signup" exact element={<Signup />} />
         <Route path="/calendar" exact element={<ClassicalCalendar />} />
         <Route path="/" exact element={<Login />} />
+        <Route path="/PostBlog" element={<Blog/>} />
         <Route path="/contactUs" element={<Contact/>} />
-        <Route path="/postBlog" element={<Blog/>} />
-
-        {/* </UserContext.Provider> */}
         <Route path="/" element={<Navigate replace to="/login" />} />
       </Routes>
     </div>
