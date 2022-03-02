@@ -84,37 +84,37 @@ export default class Blog extends React.Component {
         </div> */}
 
         <div className="div1 center">
-              <form id="contact-form" className="form" onSubmit={this.handleSubmit}>
-                <br /><br /><br /><br />
-                <h1>Post Blogs</h1>
-                <br />
-                <h5>Share with us medical informations.</h5>
-                <br />
-                <div className="form-group">
-                  <label htmlFor="name">Title</label>
-                  <input type="text" className="form-control" name="title" value={this.state.title} onChange={this.handleChange} />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="message">Content</label>
-                  <textarea className="form-control" rows="15" name="texte" value={this.state.texte} onChange={this.handleChange}></textarea>
-                </div>
-                                    <label htmlFor="message">Content</label>
-                                    <br />
-                <div className="form-group btn btn-primary btn-sm float-left" >
+          <form id="contact-form" className="form" onSubmit={this.handleSubmit}>
+            <br /><br /><br /><br />
+            <h1>Post Blogs</h1>
+            <br />
+            <h5>Share with us medical informations.</h5>
+            <br />
+            <div className="form-group">
+              <label htmlFor="name">Title</label>
+              <input type="text" className="form-control" name="title" value={this.state.title} onChange={this.handleChange} />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Content</label>
+              <textarea className="form-control" rows="15" name="texte" value={this.state.texte} onChange={this.handleChange}></textarea>
+            </div>
+            <label htmlFor="message">Image</label>
+            <br />
+            <div>
 
-                  <input onChange={(e) => {
-                    this.uploadImg(e.target.files)
-                  }} type="file" />
-                </div>
-                <br />
-                <button type="submit" className="btn btn-primary" type="submit" onClick={this.handleSubmit}>Submit</button>
-              <div>{this.state.blogArr.map(blog => {
+              <input onChange={(e) => {
+                this.uploadImg(e.target.files)
+              }} type="file" />
+            </div>
+            <br />
+            <button type="submit" className="btn btn-primary" type="submit" onClick={this.handleSubmit}>Submit</button>
+            <div>{this.state.blogArr.map(blog => {
               return (
                 <BlogComponent blog={blog} key={blog.texte} />
               )
             })}</div>
-              </form>
-            </div>
+          </form>
+        </div>
 
         <div className="div2">
           <div class="wrapper">

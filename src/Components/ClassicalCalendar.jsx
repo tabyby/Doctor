@@ -106,9 +106,7 @@ export default class ClassicalCalendar extends Component {
                                         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                                         <li>
                                             <Link to="/contactUs">
-
                                                 <span className="item">contact us</span>
-
                                             </Link>
                                         </li>
                                         <li>
