@@ -97,7 +97,51 @@ const ContactUs = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+                <ul>
+                  <li>
+                    <Link to="/Calendar">
+                      <span className="item">Calendar</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/PostBlog">
+                      <span className="item">Post blogs</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <a>
+                      <span className="item">Blogs</span>
+                    </a>
+                  </li>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <li>
+                    <a className="active">
+                      <span className="item">contact us</span>
+                    </a>
+                  </li>
+                  <li>
+                    <Link to="/">
+                      <span onClick={() => this.logout()} className="item">
+                        Log out
+                      </span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
     )
 }
 export default ContactUs;
