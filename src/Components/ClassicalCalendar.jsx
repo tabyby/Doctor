@@ -4,7 +4,7 @@ import "react-calendar/dist/Calendar.css";
 import data from "./fakeData";
 import "./grid.css";
 import { Link, useNavigate } from "react-router-dom";
-import { AdvancedImage } from "@cloudinary/react";
+import Sidebar from "./Sidebar.jsx";
 
 export default class ClassicalCalendar extends Component {
   constructor() {
@@ -40,10 +40,11 @@ export default class ClassicalCalendar extends Component {
 
     return (
       <div>
+        <Sidebar/>
         <div>
           <div></div>
-          <div class="parent">
-            <div class="div1">
+          <div className="parent">
+            <div className="div1">
               <div>
                 <br />
                 <br />
@@ -90,64 +91,6 @@ export default class ClassicalCalendar extends Component {
               </div>
               <br />
               <br />
-            </div>
-            <div class="div2">
-              <div class="wrapper">
-                <div class="sidebar">
-                  <div class="profile">
-                    <img
-                      src="https://media.discordapp.net/attachments/936015556287528980/947614190263210035/cc93f1595f4ec18589d585e5d9910c2f.jpg?width=473&height=473"
-                      alt="profile_picture"
-                    />
-                    <h3>Dr Mortadha</h3>
-                    <p>Dentist</p>
-                  </div>
-                  <ul>
-                    <li>
-                      <a class="active">
-                        <span class="item">Calendar</span>
-                      </a>
-                    </li>
-                    <li>
-                      <Link to="/PostBlog">
-                        <span className="item">Post blogs</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <a>
-                        <span className="item">Blogs</span>
-                      </a>
-                    </li>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <li>
-                      <Link to="/contactUs">
-                        <span className="item">contact us</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/">
-                        <span className="item" onClick={()=>this.logout()}>
-                          Log out
-                        </span>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
             </div>
           </div>
         </div>
