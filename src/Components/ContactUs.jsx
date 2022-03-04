@@ -4,14 +4,16 @@ import emailjs from "@emailjs/browser";
 
 import "./contact.css";
 
-const ContactUs = () => {
-  let [values, setValues] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  console.log(values.name);
-  const form = useRef();
+
+
+const ContactUs = () => {   
+    let [values, setValues] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
+    console.log(values.name)
+    const form = useRef();
 
   function handleChange(e) {
     const { name, value } = e.target;
