@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./login.css";
+import GmailLogin from "./Gmaillogin";
 
 const Login = () => {
   const [data, setData] = useState({ email: "", password: "" });
@@ -148,6 +149,9 @@ const Login = () => {
                           >
                             Sign in
                           </button>
+                         
+                            <GmailLogin />
+                          
                         </div>
                         <Link to="/signup">
                           <div class="text-center d-flex justify-content-between mt-4">

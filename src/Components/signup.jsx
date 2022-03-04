@@ -19,7 +19,6 @@ const Signup = () => {
   });
   const error = "";
   const navigate = useNavigate();
-
   const handleChange = ({ currentTarget: input }) => {
     setData({ ...data, [input.name]: input.value });
     console.log("====>", data);

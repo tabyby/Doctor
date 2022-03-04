@@ -7,6 +7,7 @@ import BlogComponent from "./Components/BlogComponent";
 import Patients from "./Components/Patients";
 import Contact from "./Components/ContactUs"
 import Blog from "./Components/Blog"
+import GmailLogin from "./Components/Gmaillogin";
 function App() {
   return (
     <div>
@@ -20,6 +21,7 @@ function App() {
         <Route path="/PostBlog" element={<Blog/>} />
         <Route path="/contactUs" element={<Contact/>} />
         <Route path="/" element={<Navigate replace to="/login" />} />
+        <Route path="/gmailsignin"  element={<GmailLogin />} />
       </Routes>
     </div>
   );
