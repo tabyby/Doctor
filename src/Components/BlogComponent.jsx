@@ -22,6 +22,7 @@ function BlogComponent(props) {
                 <div class="product-image">
                     <img src={props.blog.img} alt="" />
                 </div>
+                <button onClick={props.handleDelete} >Delete Blog</button>
             </div>
             <br />
         </div>

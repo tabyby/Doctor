@@ -3,7 +3,7 @@ import axios from "axios";
 import "./contact.css";
 import BlogComponent from "./BlogComponent";
 import { Link, useNavigate } from "react-router-dom";
-import Sidebar from './Sidebar.jsx'
+import Sidebar from "./Sidebar.jsx";
 export default class Blog extends React.Component {
   constructor() {
     super();
@@ -12,7 +12,7 @@ export default class Blog extends React.Component {
       blogArr: [],
       texte: "",
       img: "",
-      createdAt: "",
+      delete: 0,
     };
   }
   componentDidMount() {
@@ -66,14 +66,29 @@ export default class Blog extends React.Component {
     });
     axios.post("http://localhost:3000/doctor/api/postBlogs", this.state);
     console.log(this.state);
+    this.componentDidMount();
+  };
+
+  handleDelete = (id) => {
+    axios
+      .delete(`http://localhost:3000/doctor/api/deleteBlog/${id}`)
+      .then((response) => {
+        console.log(response.data);
+        this.componentDidMount();
+        this.setState({
+          blogArr: this.state.blogArr.filter((blog) => blog.id !== id),
+        });
+      })
+      .catch((err) => console.warn(err));
   };
 
   render() {
     return (
       <div className="parent">
-        <Sidebar/>
+        <Sidebar />
         <div className="div1 center">
-          <form id="contact-form" className="form" onSubmit={this.handleSubmit}>
+          <div id="contact-form" className="form" >
+            <form onSubmit={this.handleSubmit} >
             <br />
             <br />
             <br />
@@ -120,14 +135,25 @@ export default class Blog extends React.Component {
             >
               Submit
             </button>
-            <div>
-              {this.state.blogArr.map((blog) => {
-                return <BlogComponent  blog={blog} key={blog.texte} />;
-              })}
-            </div>
+       
           </form>
+             {this.state.blogArr.map((blog) => {
+              console.log(blog.id_blog);
+              return (
+                <BlogComponent
+                  handleDelete={() => this.handleDelete(blog.id_blog)}
+                  blog={blog}
+                  key={blog.texte}
+                />
+              );
+            })}
+          </div>
+          <div >
+       
+          </div>
         </div>
-        <br /><br />
+        <br />
+        <br />
       </div>
     );
   }
