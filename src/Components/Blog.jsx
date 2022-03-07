@@ -67,6 +67,11 @@ export default class Blog extends React.Component {
     axios.post("http://localhost:3000/doctor/api/postBlogs", this.state);
     console.log(this.state);
     this.componentDidMount();
+    this.setState({
+      texte :"",
+      title:"",
+      img : "",
+    })
   };
 
   handleDelete = (id) => {

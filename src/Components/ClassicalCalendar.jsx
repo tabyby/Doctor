@@ -5,37 +5,43 @@ import data from "./fakeData";
 import "./grid.css";
 import { Link, useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar.jsx";
+import axios from "axios";
 
 export default class ClassicalCalendar extends Component {
   constructor() {
     super();
     this.state = {
       selectedDate: new Date(),
-      view: "all",
+      appointment: [],
+      
     };
+  }
+  componentDidMount(){
+    axios.get("http://localhost:3000/doctor/api/getAppointment")
+    .then(response=>{console.log(response.data[0].date)
+      this.setState({
+        appointment : response.data,
+      })
+    })
+
   }
   logout() {
     localStorage.removeItem("doctor");
     console.log("hani lenna ")
   }
-  backToAll = () => {
-    this.setState({
-      view: "all",
-    });
-  };
-  handleViews = (s) => {
-    this.setState({
-      view: s,
-    });
-  };
+
+
   handleChange = (date) => {
     this.setState({ selectedDate: date });
   };
   render() {
     let sortedData = [];
-    sortedData = data.filter(
-      (patient) =>
-        parseInt(patient.dateOfAp[0]) === this.state.selectedDate.getDate()
+    sortedData = this.state.appointment.filter(
+      (patient) =>  {
+        let sumApp = patient.date[6] + patient.date[7];
+        return(
+        parseInt(sumApp) === this.state.selectedDate.getDate() 
+        )}
     );
 
     return (
@@ -72,7 +78,6 @@ export default class ClassicalCalendar extends Component {
                       <th>Name</th>
                       <th>Date of bith</th>
                       <th>Date of appointement</th>
-                      <th>Time</th>
                     </tr>
                     {sortedData.map((patient) => {
                       return (
@@ -80,8 +85,7 @@ export default class ClassicalCalendar extends Component {
                           <tr key={patient.name}>
                             <td>{patient.name}</td>
                             <td>{patient.dateOfBirth}</td>
-                            <td>{patient.dateOfAp}</td>
-                            <td>{patient.time}</td>
+                            <td>{patient.date}</td>
                           </tr>
                         </tbody>
                       );
