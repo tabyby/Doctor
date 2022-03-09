@@ -5,6 +5,7 @@ import data from "./fakeData";
 import "./grid.css";
 import { Link, useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar.jsx";
+import Timer from './Timer'
 import axios from "axios";
 
 export default class ClassicalCalendar extends Component {
@@ -78,6 +79,7 @@ export default class ClassicalCalendar extends Component {
                       <th>Name</th>
                       <th>Date of bith</th>
                       <th>Date of appointement</th>
+                      <th>Timer</th>
                     </tr>
                     {sortedData.map((patient) => {
                       return (
@@ -86,11 +88,13 @@ export default class ClassicalCalendar extends Component {
                             <td>{patient.name}</td>
                             <td>{patient.dateOfBirth}</td>
                             <td>{patient.date}</td>
+                            <td><Timer/></td>
                           </tr>
                         </tbody>
                       );
                     })}
                   </table>
+                  {/* <Timer/> */}
                 </div>
               </div>
               <br />
