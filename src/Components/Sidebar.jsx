@@ -12,7 +12,7 @@ const Sidebar = () => {
                                 src="https://media.discordapp.net/attachments/936015556287528980/947614190263210035/cc93f1595f4ec18589d585e5d9910c2f.jpg?width=473&height=473"
                                 alt="profile_picture"
                             />
-                            <h3>Dr Mortadha</h3>
+                            <h3>Dr Oussama</h3>
                             <p>Dentist</p>
                         </div>
                         <ul>
@@ -26,16 +26,12 @@ const Sidebar = () => {
                                     <span className="item">Post blogs</span>
                                 </Link>
                             </li>
-                            <li>
-                                <a>
-                                    <span className="item">Blogs</span>
-                                </a>
-                            </li>
                             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                             <li>
-                                <a className="active">
+                                <Link to="/contactUs">
+                                
                                     <span className="item">contact us</span>
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <Link to="/">
