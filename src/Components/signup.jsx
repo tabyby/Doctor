@@ -164,12 +164,9 @@ const Signup = () => {
                               required=""
                               autofocus=""
                               class="form-control rounded-pill border-0 shadow-sm px-4"
-                              type="text"
-                              placeholder="First Name"
                               name="firstName"
                               onChange={handleChange}
                               value={data.firstName}
-                              required
                             />
                           </div>
                           <div class="mb-3">
@@ -180,12 +177,9 @@ const Signup = () => {
                               required=""
                               autofocus=""
                               class="form-control rounded-pill border-0 shadow-sm px-4"
-                              type="text"
-                              placeholder="Last Name"
                               name="lastName"
                               onChange={handleChange}
                               value={data.lastName}
-                              required
                             />
                           </div>
                           <div class="mb-3">
@@ -196,12 +190,9 @@ const Signup = () => {
                               required=""
                               autofocus=""
                               class="form-control rounded-pill border-0 shadow-sm px-4"
-                              type="email"
-                              placeholder="Email"
                               name="email"
                               onChange={handleChange}
                               value={data.email}
-                              required
                             />
                           </div>
                           <div class="mb-3">
@@ -211,12 +202,9 @@ const Signup = () => {
                               placeholder="Password"
                               required=""
                               class="form-control rounded-pill border-0 shadow-sm px-4 text-primary"
-                              type="password"
-                              placeholder="Password"
                               name="password"
                               onChange={handleChange}
                               value={data.password}
-                              required
                             />
                           </div>
                           <div class="mb-3">
@@ -227,12 +215,9 @@ const Signup = () => {
                               required=""
                               autofocus=""
                               class="form-control rounded-pill border-0 shadow-sm px-4"
-                              type="phoneNumber"
-                              placeholder="phoneNumber"
                               name="phoneNumber"
                               onChange={handleChange}
                               value={data.phoneNumber}
-                              required
                             />
                           </div>
                           <div class="mb-3">
@@ -243,13 +228,9 @@ const Signup = () => {
                               required=""
                               autofocus=""
                               class="form-control rounded-pill border-0 shadow-sm px-4"
-                              type="phoneNumber"
-                              type="field"
-                              placeholder="field"
                               name="field"
                               onChange={handleChange}
                               value={data.field}
-                              required
                             />
                           </div>
                           <div class="mb-3">
@@ -260,13 +241,9 @@ const Signup = () => {
                               required=""
                               autofocus=""
                               class="form-control rounded-pill border-0 shadow-sm px-4"
-                              type="phoneNumber"
-                              type="location"
-                              placeholder="location"
                               name="location"
                               onChange={handleChange}
                               value={data.location}
-                              required
                             />
                           </div>
                           <div class="mb-3">
@@ -277,13 +254,9 @@ const Signup = () => {
                               required=""
                               autofocus=""
                               class="form-control rounded-pill border-0 shadow-sm px-4"
-                              type="phoneNumber"
-                              type="profilePicture"
-                              placeholder="ProfilePicture"
                               name="profilePicture"
                               onChange={handleChange}
                               value={data.profilePicture}
-                              required
                             />
                           </div>
                           <div class="mb-3">
@@ -294,13 +267,9 @@ const Signup = () => {
                               required=""
                               autofocus=""
                               class="form-control rounded-pill border-0 shadow-sm px-4"
-                              type="phoneNumber"
-                              type="description"
-                              placeholder="description"
                               name="description"
                               onChange={handleChange}
                               value={data.description}
-                              required
                             />
                           </div>
                           <div class="form-check">
