@@ -3,6 +3,7 @@ import axios from "axios";
 import "./contact.css";
 import BlogComponent from "./BlogComponent";
 import { Link, useNavigate } from "react-router-dom";
+import Sidebar from "./Sidebar.jsx";
 export default class Blog extends React.Component {
   constructor() {
     super();
@@ -11,7 +12,7 @@ export default class Blog extends React.Component {
       blogArr: [],
       texte: "",
       img: "",
-      createdAt: "",
+      delete: 0,
     };
   }
   componentDidMount() {
@@ -65,29 +66,34 @@ export default class Blog extends React.Component {
     });
     axios.post("http://localhost:3000/doctor/api/postBlogs", this.state);
     console.log(this.state);
+    this.componentDidMount();
+    this.setState({
+      texte :"",
+      title:"",
+      img : "",
+    })
+  };
+
+  handleDelete = (id) => {
+    axios
+      .delete(`http://localhost:3000/doctor/api/deleteBlog/${id}`)
+      .then((response) => {
+        console.log(response.data);
+        this.componentDidMount();
+        this.setState({
+          blogArr: this.state.blogArr.filter((blog) => blog.id !== id),
+        });
+      })
+      .catch((err) => console.warn(err));
   };
 
   render() {
     return (
       <div className="parent">
-        {/* <div className="div1">
-          <form onSubmit={this.handleSubmit} >
-            <div><input name="title" value={this.state.title} onChange={this.handleChange} /></div>
-            <div><textarea name="texte" value={this.state.texte} onChange={this.handleChange} /></div>
-            <div><input onChange={(e) => {
-              this.uploadImg(e.target.files)
-            }} type="file" /></div>
-            <button type="submit" onClick={this.handleSubmit} >add blog</button>
-            <div>{this.state.blogArr.map(blog => {
-              return (
-                <BlogComponent blog={blog} key={blog.texte} />
-              )
-            })}</div>
-          </form>
-        </div> */}
-
+        <Sidebar />
         <div className="div1 center">
-          <form id="contact-form" className="form" onSubmit={this.handleSubmit}>
+          <div id="contact-form" className="form" >
+            <form onSubmit={this.handleSubmit} >
             <br />
             <br />
             <br />
@@ -130,77 +136,29 @@ export default class Blog extends React.Component {
             <button
               type="submit"
               className="btn btn-primary"
-              type="submit"
               onClick={this.handleSubmit}
             >
               Submit
             </button>
-            <div>
-              {this.state.blogArr.map((blog) => {
-                return <BlogComponent blog={blog} key={blog.texte} />;
-              })}
-            </div>
+       
           </form>
-        </div>
-
-        <div className="div2">
-          <div class="wrapper">
-            <div class="sidebar">
-              <div class="profile">
-                <img
-                  src="https://media.discordapp.net/attachments/936015556287528980/947614190263210035/cc93f1595f4ec18589d585e5d9910c2f.jpg?width=473&height=473"
-                  alt="profile_picture"
+             {this.state.blogArr.map((blog) => {
+              console.log(blog.id_blog);
+              return (
+                <BlogComponent
+                  handleDelete={() => this.handleDelete(blog.id_blog)}
+                  blog={blog}
+                  key={blog.texte}
                 />
-                <h3>Dr Mortadha</h3>
-                <p>Dentist</p>
-              </div>
-              <ul>
-                <li>
-                  <Link to="/Calendar">
-                    <span className="item">Calendar</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/PostBlog">
-                    <span className="item">Post blogs</span>
-                  </Link>
-                </li>
-                <li>
-                  <a>
-                    <span className="item">Blogs</span>
-                  </a>
-                </li>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <li>
-                  <Link to="/contactUs">
-                    <span className="item">contact us</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">
-                    <span onClick={() => this.logout()} className="item">
-                      Log out
-                    </span>
-                  </Link>
-                </li>
-              </ul>
-            </div>
+              );
+            })}
+          </div>
+          <div >
+       
           </div>
         </div>
+        <br />
+        <br />
       </div>
     );
   }

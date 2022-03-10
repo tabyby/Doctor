@@ -38,108 +38,6 @@ const Signup = () => {
 
   return (
     <div>
-      {/* <div className="signupContainer">
-        <div className="signupFormContainer">
-          <div className="styling">
-            <h1>Welcome Back</h1>
-            <Link to="/login">
-              <button type="button" className="whiteStyle">
-                Sing in
-              </button>
-            </Link>
-          </div>
-          <div className="rightStyle">
-            <form className="styler form container" onSubmit={handleSubmit}>
-              <h1>Create Account</h1>
-              <input
-                type="text"
-                placeholder="First Name"
-                name="firstName"
-                onChange={handleChange}
-                value={data.firstName}
-                required
-                className="styleinput"
-              />
-              <input
-                type="text"
-                placeholder="Last Name"
-                name="lastName"
-                onChange={handleChange}
-                value={data.lastName}
-                required
-                className="stylesinput"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                name="email"
-                onChange={handleChange}
-                value={data.email}
-                required
-                className="styleInput"
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                name="password"
-                onChange={handleChange}
-                value={data.password}
-                required
-                className="stylesInput"
-              />
-              <input
-                type="phoneNumber"
-                placeholder="phoneNumber"
-                name="phoneNumber"
-                onChange={handleChange}
-                value={data.phoneNumber}
-                required
-                className="stylesInput"
-              />
-              <input
-                type="field"
-                placeholder="field"
-                name="field"
-                onChange={handleChange}
-                value={data.field}
-                required
-                className="stylesInput"
-              />
-              <input
-                type="location"
-                placeholder="location"
-                name="location"
-                onChange={handleChange}
-                value={data.location}
-                required
-                className="stylesInput"
-              />
-              <input
-                type="profilePicture"
-                placeholder="ProfilePicture"
-                name="profilePicture"
-                onChange={handleChange}
-                value={data.profilePicture}
-                required
-                className="stylesInput"
-              />
-              <input
-                type="description"
-                placeholder="description"
-                name="description"
-                onChange={handleChange}
-                value={data.description}
-                required
-                className="stylesInput"
-              />
-              {error && <div className="errorstyleMessage">{error}</div>}
-              <button type="submit" className="styles green">
-                Sing Up
-              </button>
-            </form>
-          </div>
-        </div>
-      </div> */}
       <div>
         <div className="maincontainer">
           <div class="container-fluid">
@@ -159,9 +57,6 @@ const Signup = () => {
                           <div class="mb-3">
                             <input
                               id="inputEmail"
-                              type="text"
-                              placeholder="First name"
-                              required=""
                               autofocus=""
                               class="form-control rounded-pill border-0 shadow-sm px-4"
                               name="firstName"
@@ -172,9 +67,6 @@ const Signup = () => {
                           <div class="mb-3">
                             <input
                               id="inputEmail"
-                              type="text"
-                              placeholder="Last name"
-                              required=""
                               autofocus=""
                               class="form-control rounded-pill border-0 shadow-sm px-4"
                               name="lastName"
@@ -185,9 +77,6 @@ const Signup = () => {
                           <div class="mb-3">
                             <input
                               id="inputEmail"
-                              type="email"
-                              placeholder="Email address"
-                              required=""
                               autofocus=""
                               class="form-control rounded-pill border-0 shadow-sm px-4"
                               name="email"
@@ -198,9 +87,6 @@ const Signup = () => {
                           <div class="mb-3">
                             <input
                               id="inputPassword"
-                              type="password"
-                              placeholder="Password"
-                              required=""
                               class="form-control rounded-pill border-0 shadow-sm px-4 text-primary"
                               name="password"
                               onChange={handleChange}
@@ -210,9 +96,6 @@ const Signup = () => {
                           <div class="mb-3">
                             <input
                               id="inputEmail"
-                              type="text"
-                              placeholder="Phone number"
-                              required=""
                               autofocus=""
                               class="form-control rounded-pill border-0 shadow-sm px-4"
                               name="phoneNumber"
@@ -223,9 +106,6 @@ const Signup = () => {
                           <div class="mb-3">
                             <input
                               id="inputEmail"
-                              type="text"
-                              placeholder="Field"
-                              required=""
                               autofocus=""
                               class="form-control rounded-pill border-0 shadow-sm px-4"
                               name="field"
@@ -236,9 +116,6 @@ const Signup = () => {
                           <div class="mb-3">
                             <input
                               id="inputEmail"
-                              type="text"
-                              placeholder="Location"
-                              required=""
                               autofocus=""
                               class="form-control rounded-pill border-0 shadow-sm px-4"
                               name="location"
@@ -249,9 +126,6 @@ const Signup = () => {
                           <div class="mb-3">
                             <input
                               id="inputEmail"
-                              type="text"
-                              placeholder="Profile picture"
-                              required=""
                               autofocus=""
                               class="form-control rounded-pill border-0 shadow-sm px-4"
                               name="profilePicture"
@@ -262,9 +136,6 @@ const Signup = () => {
                           <div class="mb-3">
                             <input
                               id="inputEmail"
-                              type="text"
-                              placeholder="Description"
-                              required=""
                               autofocus=""
                               class="form-control rounded-pill border-0 shadow-sm px-4"
                               name="description"

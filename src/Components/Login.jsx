@@ -44,46 +44,6 @@ const Login = () => {
   };
   return (
     <div className="styleslogincontainer">
-      {/* <div className="styleslogincontainer">
-        <div className="styleslogincontainer">
-          <form className="styleslogincontainer" onSubmit={handleSubmit}>
-            <h1>Login to Your Account</h1>
-            <div> {console.log("user", user)}</div>
-            <input
-              type="email"
-              placeholder="Email"
-              name="email"
-              onChange={handleChange}
-              value={data.email}
-              required
-              className="styleslogincontainer"
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              onChange={handleChange}
-              value={data.password}
-              required
-              className="styleslogincontainer"
-            />
-            {error && <div className="styleslogincontainer">{error}</div>}
-
-            <button onclick={()=>{handleSubmit()}} type="submit" className="styleslogincontainer">
-              Sing In
-            </button>
-          </form>
-        </div>
-        <div className="styleslogincontainer">
-          <h1>New Here ?</h1>
-          <Link to="/PostBlogs">
-            <button type="button" className="styleslogincontainer">
-              Sing Up
-            </button>
-          </Link>
-        </div>
-      </div> */}
-
       <div className="maincontainer">
         <div class="container-fluid">
           <div class="row no-gutter">
@@ -102,9 +62,6 @@ const Login = () => {
                         <div class="mb-3">
                           <input
                             id="inputEmail"
-                            type="email"
-                            placeholder="Email address"
-                            required=""
                             autofocus=""
                             class="form-control rounded-pill border-0 shadow-sm px-4"
                             name="email"
@@ -115,9 +72,6 @@ const Login = () => {
                         <div class="mb-3">
                           <input
                             id="inputPassword"
-                            type="password"
-                            placeholder="Password"
-                            required=""
                             class="form-control rounded-pill border-0 shadow-sm px-4 text-primary"
                             name="password"
                             onChange={handleChange}
