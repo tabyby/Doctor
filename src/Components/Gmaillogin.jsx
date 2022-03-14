@@ -16,7 +16,7 @@ function GmailLogin() {
     setShowlogoutButton(true);
     setTimeout(() => {
       navigate("/Calendar");
-    }, 1000);
+    }, 2500);
   };
 
   const onLoginFailure = (res) => {
