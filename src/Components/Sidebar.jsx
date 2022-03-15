@@ -1,5 +1,7 @@
 import './grid.css'
 import { Link, useNavigate } from "react-router-dom";
+import ContactUs from './ContactUs';
+import BlogLinks from './BlogLink';
 
 const Sidebar = () => {
     return (
@@ -12,8 +14,8 @@ const Sidebar = () => {
                                 src="https://media.discordapp.net/attachments/936015556287528980/947614190263210035/cc93f1595f4ec18589d585e5d9910c2f.jpg?width=473&height=473"
                                 alt="profile_picture"
                             />
-                            <h3>Dr Mortadha</h3>
-                            <p>Dentist</p>
+                            <h3>Dr ismail hajjri </h3>
+                            <p>generalist</p>
                         </div>
                         <ul>
                             <li>
@@ -27,15 +29,17 @@ const Sidebar = () => {
                                 </Link>
                             </li>
                             <li>
-                                <a>
-                                    <span className="item">Blogs</span>
-                                </a>
+                                <Link to="/Infos" >
+                                    <span className="item">Patient Information </span>
+                                    </Link>
                             </li>
                             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                             <li>
-                                <a className="active">
-                                    <span className="item">contact us</span>
-                                </a>
+                                    <Link to="/contactUs"  >
+                                
+                                    <span LinkTo="/contactUs" className="item">contact us</span>
+                       
+                                    </Link>
                             </li>
                             <li>
                                 <Link to="/">

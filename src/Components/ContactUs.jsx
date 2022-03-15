@@ -109,8 +109,8 @@ const ContactUs = () => {
                   src="https://media.discordapp.net/attachments/936015556287528980/947614190263210035/cc93f1595f4ec18589d585e5d9910c2f.jpg?width=473&height=473"
                   alt="profile_picture"
                 />
-                <h3>Dr Mortadha</h3>
-                <p>Dentist</p>
+                <h3>Dr ismail hajjri</h3>
+                <p>generalist</p>
               </div>
               <ul>
                 <li>
@@ -144,7 +144,7 @@ const ContactUs = () => {
                 <br />
                 <br />
                 <li>
-                  <a className="active">
+                  <a >
                     <span className="item">contact us</span>
                   </a>
                 </li>
