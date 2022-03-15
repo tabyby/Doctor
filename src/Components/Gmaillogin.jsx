@@ -14,9 +14,9 @@ function GmailLogin() {
     console.log("Login Success:", res.profileObj);
     setShowloginButton(false);
     setShowlogoutButton(true);
-    setTimeout(() => {
-      navigate("/Calendar");
-    }, 2500);
+    // setTimeout(() => {
+    //   navigate("/Calendar");
+    // }, 2500);
   };
 
   const onLoginFailure = (res) => {
