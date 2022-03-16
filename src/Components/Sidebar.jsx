@@ -16,6 +16,7 @@ const Sidebar = () => {
                             />
                             <h3>Dr ismail hajjri </h3>
                             <p>generalist</p>
+
                         </div>
                         <ul>
                             <li>
@@ -28,6 +29,7 @@ const Sidebar = () => {
                                     <span className="item">Post blogs</span>
                                 </Link>
                             </li>
+
                             <li>
                                 <Link to="/Infos" >
                                     <span className="item">Patient Information </span>
@@ -40,6 +42,7 @@ const Sidebar = () => {
                                     <span LinkTo="/contactUs" className="item">contact us</span>
                        
                                     </Link>
+
                             </li>
                             <li>
                                 <Link to="/">
