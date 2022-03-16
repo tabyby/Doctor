@@ -26,12 +26,12 @@ const Sidebar = () => {
                   <span className="item">Post blogs</span>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                   Google mapss
                 <Link to="/googlemaps">
                   <GoogleMap />
                 </Link>
-              </li>
+              </li> */}
               <br />
               <br />
               <br />

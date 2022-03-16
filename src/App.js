@@ -8,12 +8,14 @@ import Contact from "./Components/ContactUs";
 import Blog from "./Components/Blog";
 import GmailLogin from "./Components/Gmaillogin";
 import GoogleMaps from "./Components/GoogleMap";
+import PersonalProfile from "./Components/PersonalProfile";
 function App() {
   return (
     <div>
       <Routes>
         {<Route path="/login" exact element={<Login />} />}
-        <Route path="/googlemaps" element={<GoogleMaps />} />
+        {/* <Route path="/personalprofile" element={<PersonalProfile />} /> */}
+        {/* <Route path="/googlemaps" element={<GoogleMaps />} /> */}
         <Route path="/Patients" element={<Patients />} />
         <Route path="/Calendar" element={<ClassicalCalendar />} />
         <Route path="/signup" exact element={<Signup />} />
