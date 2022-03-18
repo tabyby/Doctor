@@ -64,24 +64,18 @@ const Login = () => {
                             id="inputEmail"
                             autofocus=""
                             class="form-control rounded-pill border-0 shadow-sm px-4"
-                            type="email"
-                            placeholder="Email"
                             name="email"
                             onChange={handleChange}
                             value={data.email}
-                            required
                           />
                         </div>
                         <div class="mb-3">
                           <input
                             id="inputPassword"
                             class="form-control rounded-pill border-0 shadow-sm px-4 text-primary"
-                            type="password"
-                            placeholder="Password"
                             name="password"
                             onChange={handleChange}
                             value={data.password}
-                            required
                           />
                         </div>
                         <div class="form-check">
@@ -103,9 +97,8 @@ const Login = () => {
                           >
                             Sign in
                           </button>
-                         
-                            <GmailLogin />
-                          
+
+                          <GmailLogin />
                         </div>
                         <Link to="/signup">
                           <div class="text-center d-flex justify-content-between mt-4">
