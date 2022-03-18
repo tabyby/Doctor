@@ -13,6 +13,7 @@ function App() {
   return (
     <div>
       <Routes>
+
         {<Route path="/login" exact element={<Login />} />}
         {/* <Route path="/personalprofile" element={<PersonalProfile />} /> */}
         {/* <Route path="/googlemaps" element={<GoogleMaps />} /> */}
