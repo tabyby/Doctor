@@ -2,6 +2,12 @@ import React from "react";
 import './blog.css'
 
 function BlogComponent(props) {
+    let style = {
+        
+            backgroundColor: "#008CBA",
+            color : "white",
+          }
+    
     return (
         <div>
             {/* <div>{props.blog.text}</div>
@@ -22,8 +28,8 @@ function BlogComponent(props) {
                 <div class="product-image">
                     <img src={props.blog.img} alt="" />
                 </div>
+                <button style={style} onClick={props.handleDelete} >Delete Blog</button>
             </div>
-                <button onClick={props.handleDelete} >Delete Blog</button>
             <br />
         </div>
     )
